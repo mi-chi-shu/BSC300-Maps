@@ -59,12 +59,12 @@ jobs:
         run: |
           osmosis/osmfilter -v tmp.o5m \
           --keep="highway=primary =primary_link =secondary =secondary_link =tertiary =tertiary_link =trunk =trunk_link =cycleway =living_street =residential =road =track =unclassified" \
-          --keep="highway=service and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
-          --keep="highway=footway and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
-          --keep="highway=bridleway and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
-          --keep="highway=path and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
-          --keep="highway=pedestrian and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
-          --keep="highway=unclassified and ( bicycle=designated or bicycle=yes or bicycle=permissive )" \
+          --keep="highway=service and bicycle!=no" \
+          --keep="highway=footway and bicycle!=no" \
+          --keep="highway=bridleway and bicycle!=no" \
+          --keep="highway=path and bicycle!=no" \
+          --keep="highway=pedestrian and bicycle!=no" \
+          --keep="highway=unclassified and bicycle!=no" \
           --keep="sidewalk:*:bicycle=yes" \
           --keep="waterway= landuse= natural= leisure=" \
           --keep="route=bicycle =mtb" \
