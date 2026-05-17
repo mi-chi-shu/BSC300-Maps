@@ -71,6 +71,7 @@ jobs:
           --keep="cycleway:*=lane :*=track *:=shared_lane *:=share_busway *:=separate *:=crossing *:=shoulder *:=link *:=traffic_island" \
           --keep="bicycle_road=yes" \
           --keep="cyclestreet=yes" \
+          --drop-tags="name= ref=" \      
           --out-o5m > tmp1.o5m
 
           osmosis/osmfilter -v tmp1.o5m --modify-tags=" \
